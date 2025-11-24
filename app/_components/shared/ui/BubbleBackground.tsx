@@ -16,7 +16,7 @@ export default function BubbleBackground() {
       curX += (tgX - curX) / 20;
       curY += (tgY - curY) / 20;
       if (interBubble) {
-        interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+        interBubble.style.transform = `translate3d(${Math.round(curX)}px, ${Math.round(curY)}px, 0)`;
       }
       requestAnimationFrame(move);
     }

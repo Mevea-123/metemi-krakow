@@ -193,7 +193,7 @@ body {
   --color4: 200, 80, 90;
   --color5: 240, 160, 80;
   --color-interactive: 226, 55, 62;
-  --circle-size: 80%;
+  --circle-size: 80vmin;
   --blending: hard-light;
 }
 
@@ -231,13 +231,20 @@ body {
 }
 
 .gradient-bg svg {
-  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
 }
 
 .gradients-container {
   filter: url(#goo);
   width: 100%;
   height: 100%;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .g1 {
@@ -314,4 +321,8 @@ body {
   top: -50%;
   left: -50%;
   opacity: 0.7;
+}
+
+.g1, .g2, .g3, .g4, .g5, .interactive {
+  will-change: transform;
 }
