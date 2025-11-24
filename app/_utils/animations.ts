@@ -328,6 +328,36 @@ function parallaxAnimation() {
   });
 }
 
+function animateTextsLetterSpacingScrub() {
+  const elements = document.querySelectorAll("[data-letter-spacing-scrub]");
+
+  elements.forEach((element) => {
+    const split = new SplitText(element, {
+      type: "words",
+      wordsClass: "split-word",
+    });
+
+    gsap.fromTo(
+      split.words,
+      {
+        letterSpacing: "0.4em",
+      },
+      {
+        letterSpacing: "0em",
+        duration: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: element,
+          start: "top 100%",
+          end: "bottom 70%",
+          scrub: true,
+          markers: false,
+        },
+      }
+    );
+  });
+}
+
 export function initAnimations() {
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(SplitText);
@@ -341,6 +371,7 @@ export function initAnimations() {
   fadeLeftAnimation();
   fadeRightAnimation();
   parallaxAnimation();
+  animateTextsLetterSpacingScrub();
 
   // Ensure ScrollTrigger accounts for media sizing once videos are ready
   // This fixes parallax elements that are videos whose dimensions become known after metadata load

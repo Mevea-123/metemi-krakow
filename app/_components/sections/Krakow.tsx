@@ -21,7 +21,13 @@ export default function Krakow() {
         </div>
       </div>
       <div className="w-full relative overflow-hidden md:h-auto">
-        <MetemiBottom className="absolute text-white z-[5] left-1/2 -translate-x-1/2 w-[100vw] -top-4 md:-top-12" />
+        {/* <MetemiBottom className="absolute text-white z-[5] left-1/2 -translate-x-1/2 w-[100vw] -top-4 md:-top-12" /> */}
+        <h2
+          data-letter-spacing-scrub
+          className="text-stroke  text-[27vw]/[65%] absolute top-0 z-[5] left-1/2 -translate-x-1/2"
+        >
+          METEMI
+        </h2>
 
         <Video
           src="/videos/krakow.mp4"

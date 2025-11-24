@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Metemi - Změňte způsob, jakým se setkáváte s lidmi v reálném světě"
+    />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Metemi" />
+    <meta
+      property="og:description"
+      content="Změňte způsob, jakým se setkáváte s lidmi v reálném světě"
+    />
+
+    <title>Metemi</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="radar.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- GSAP Core -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+      defer
+    ></script>
+    <!-- GSAP ScrollTrigger Plugin -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <!-- GSAP SplitText Plugin -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"
+      defer
+    ></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <!-- Confeti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <!-- Video Manager -->
+    <script src="videoManager.js"></script>
+    <!-- Radar Script -->
+    <script src="radar.js" defer></script>
+    <!-- Main Script -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navigation">
+      <!-- Navigation content will be added here -->
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Container Section -->
+      <div class="hero-wrapper">
+        <div class="hero-container">
+          <!-- Animated Bubble Background -->
+          <div class="gradient-bg">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="goo" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+                  <feGaussianBlur
+                    in="SourceGraphic"
+                    stdDeviation="10"
+                    result="blur"
+                  />
+                  <feColorMatrix
+                    in="blur"
+                    mode="matrix"
+                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                    result="goo"
+                  />
+                  <feBlend in="SourceGraphic" in2="goo" result="blended" />
+                  <feGaussianBlur in="blended" stdDeviation="40" />
+                </filter>
+              </defs>
+            </svg>
+            <div class="gradients-container">
+              <div class="g1"></div>
+              <div class="g2"></div>
+              <div class="g3"></div>
+              <div class="g4"></div>
+              <div class="g5"></div>
+              <div class="interactive"></div>
+            </div>
+          </div>
+          <!-- Hero Content Wrapper - allows overflow -->
+          <div class="hero-content-wrapper">
+            <!-- Hero Section -->
+            <section class="hero-section">
+              <h1 hero-logo class="main-title-visible">Metemi</h1>
+              <p class="main-title-insisible">Metemi</p>
+              <div class="hero-content">
+                <h2 class="title-big">
+                  Meet <span class="word-switcher">people</span> <br />
+                  around you. <br />
+                  Instantly.
+                </h2>
+                <div class="video-container-mobile hero-media-container radar-instance">
+                  <div class="radar-scene" style="width: 100%; height: 100%;">
+                      <div class="radar-plane">
+                          <div class="radar-ring radar-ring-bg"></div>
+                          <div class="radar-ring radar-ring-1"></div>
+                          <div class="radar-ring radar-ring-2"></div>
+                          <div class="radar-ring radar-ring-3"></div>
+                          <div class="radar-ring radar-ring-4"></div>
+                          <div class="radar-ring radar-ring-5"></div>
+                          <div class="radar-sweep"></div>
+                          <div class="bubbles-container"></div>
+                      </div>
+                  </div>
+                </div>
+                <div class="button-container">
+                  <button class="text-description-medium hero-cta">
+                    How it works
+                  </button>
+                  <button class="google-play-btn hero-google-play">
+                    <img
+                      src="assets/images/google-play.png"
+                      alt="Google Play Badge"
+                      loading="lazy"
+                    />
+                  </button>
+                </div>
+                <div class="video-container hero-media-container radar-instance">
+                  <div class="radar-scene" style="width: 100%; height: 100%;">
+                      <div class="radar-plane">
+                          <div class="radar-ring radar-ring-bg"></div>
+                          <div class="radar-ring radar-ring-1"></div>
+                          <div class="radar-ring radar-ring-2"></div>
+                          <div class="radar-ring radar-ring-3"></div>
+                          <div class="radar-ring radar-ring-4"></div>
+                          <div class="radar-ring radar-ring-5"></div>
+                          <div class="radar-sweep"></div>
+                          <div class="bubbles-container"></div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="what-differently">
+              <h2 class="titles text-white">
+                <span text-appear class="title-big-big first-title">
+                  What we do differently?
+                </span>
+                <span text-appear class="title-big-big second-title">
+                  We help you to meet people
+                </span>
+                <span text-appear class="title-big-big third-title">
+                  at your café
+                </span>
+              </h2>
+              <div class="video-container" anim-fade>
+                <video
+                  src="assets/videos/what-differently.mp4#t=0.5"
+                  preload="metadata"
+                  playsinline
+                  class="what-differently-video not-autoplay"
+                ></video>
+                <div class="video-play-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="159"
+                    height="158"
+                    viewBox="0 0 159 158"
+                    fill="none"
+                  >
+                    <path
+                      d="M67.0037 47.1661L114.348 74.4129C116.965 75.9188 118.273 76.6717 118.713 77.654C119.096 78.5109 119.096 79.4891 118.713 80.346C118.273 81.3283 116.965 82.0812 114.348 83.5871L67.0037 110.834C64.3777 112.345 63.0646 113.101 61.987 112.989C61.0471 112.892 60.1929 112.402 59.6372 111.642C59 110.771 59 109.263 59 106.247L59 51.7531C59 48.7368 59 47.2287 59.6372 46.3576C60.1929 45.5977 61.0471 45.1082 61.987 45.0108C63.0646 44.8991 64.3777 45.6548 67.0037 47.1661Z"
+                      stroke="white"
+                      stroke-width="5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M79.5 2.5C122.041 2.5 156.5 36.7651 156.5 79C156.5 121.235 122.041 155.5 79.5 155.5C36.9592 155.5 2.5 121.235 2.5 79C2.5 36.7651 36.9592 2.5 79.5 2.5Z"
+                      stroke="#D9D9D9"
+                      stroke-width="5"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="google-container">
+                <button class="google-play-btn google-play">
+                  <img
+                    src="assets/images/google-play.png"
+                    alt="Google Play Badge"
+                    class="google-play-badge"
+                    loading="lazy"
+                    anim-fade
+                  />
+                </button>
+              </div>
+            </section>
+
+            <!-- Big Grid Section -->
+            <section class="big-grid-section">
+              <div class="big-grid-mobile">
+                <h2 text-appear class="title-big text-white big-grid-title">
+                  Who loves it?
+                </h2>
+                <div class="big-grid-container">
+                  <div class="first column">
+                    <!-- Card 1 -->
+                    <div class="big-grid-card card-1">
+                      <h3
+                        text-appear
+                        class="text-description-big-small text-gradient font-bold"
+                      >
+                        Pro ty, kdo se občas cítí sami
+                      </h3>
+                      <p
+                        text-appear
+                        class="text-description-medium text-gradient font-bold"
+                      >
+                        Nejsi v tom sama. Spojení může začít jedním klikem.
+                      </p>
+                    </div>
+
+                    <!-- Card 2 (with gradient background) -->
+                    <div class="big-grid-card card-2">
+                      <h3
+                        text-appear
+                        class="text-description-big-small font-bold"
+                      >
+                        Noví přátelé, ne nové appky
+                      </h3>
+                      <p text-appear class="text-description-medium font-bold">
+                        Jedna stačí, když spojí.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="second column">
+                    <!-- Card 3 -->
+                    <div class="big-grid-card card-3">
+                      <h3
+                        text-appear
+                        class="text-description-big-small text-gradient font-bold"
+                      >
+                        Pro ty, kdo chtěli sdílet chvíle
+                      </h3>
+                      <p
+                        text-appear
+                        class="text-description-medium text-gradient font-bold"
+                      >
+                        Kafe, výlet, koncert? Právě teď.
+                      </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="big-grid-card card-6">
+                      <h3
+                        text-appear
+                        class="text-description-big-small text-gradient font-bold"
+                      >
+                        Pro ty co chtějí žít víc offline
+                      </h3>
+                      <p
+                        text-appear
+                        class="text-description-medium text-gradient font-bold"
+                      >
+                        Méně scrollování. Víc lidí kolem tebe.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="third column">
+                    <!-- Card 5 (with gradient background) -->
+                    <div class="big-grid-card card-5">
+                      <h3
+                        text-appear
+                        class="text-description-big-small font-bold"
+                      >
+                        Pro nové ve městě
+                      </h3>
+                      <p text-appear class="text-description-medium font-bold">
+                        Najdi nové lidi ve svém okolí.
+                      </p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="big-grid-card card-4">
+                      <h3
+                        text-appear
+                        class="text-description-big-small font-bold text-gradient"
+                      >
+                        Pro ty co neradi oslovují cizí
+                      </h3>
+                      <p
+                        text-appear
+                        class="text-description-medium text-gradient font-bold"
+                      >
+                        Nemusíš začínat ty. Stačí být vidět.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="big-grid-desktop">
+                <h2 text-appear class="title-big text-white big-grid-title">
+                  Who loves it?
+                </h2>
+                <div class="big-grid-container">
+                  <!-- Card 1 - Spans 1 column, 2 rows -->
+                  <div class="big-grid-card-wrapper card-1">
+                    <div class="big-grid-card card-1 anim-scale-in">
+                      <h3
+                        text-appear
+                        class="who-loves-headings text-gradient font-bold"
+                      >
+                        Pro ty, kdo se občas cítí sami
+                      </h3>
+                      <p
+                        text-appear
+                        class="text-description-medium text-gradient font-bold"
+                      >
+                        Nejsi v tom sama. Spojení může začít jedním klikem.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Card 2 - Spans 2 columns, 1 row -->
+                  <div class="big-grid-card-wrapper card-2">
+                    <div class="big-grid-card card-2 anim-scale-in">
+                      <h3 text-appear class="who-loves-headings font-bold">
+                        Noví přátelé, ne nové appky
+                      </h3>
+                      <p text-appear class="text-description-medium font-bold">
+                        Jedna stačí, když spojí.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Card 3 - Spans 1 column, 1 row -->
+                  <div class="big-grid-card-wrapper card-3">
+                    <div class="big-grid-card card-3 anim-scale-in">
+                      <h3
+                        text-appear
+                        class="who-loves-headings text-gradient font-bold"
+                      >
+                        Pro ty, kdo chtěli sdílet chvíle
+                      </h3>
+                      <p
+                        text-appear
+                        class="text-description-medium text-gradient font-bold"
+                      >
+                        Kafe, výlet, koncert? Právě teď.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Card 6 - Spans 1 column, 2 rows -->
+                  <div class="big-grid-card-wrapper card-6">
+                    <div class="big-grid-card card-6 anim-scale-in">
+                      <h3
+                        text-appear
+                        class="who-loves-headings text-gradient font-bold"
+                      >
+                        Pro ty co chtějí žít víc offline
+                      </h3>
+                      <p
+                        text-appear
+                        class="text-description-medium text-gradient font-bold"
+                      >
+                        Méně scrollování. Víc lidí kolem tebe.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Card 5 - Spans 1 column, 1 row (with gradient) -->
+                  <div class="big-grid-card-wrapper card-5">
+                    <div class="big-grid-card card-5 anim-scale-in">
+                      <h3 text-appear class="who-loves-headings font-bold">
+                        Pro nové ve městě
+                      </h3>
+                      <p text-appear class="text-description-medium font-bold">
+                        Najdi nové lidi ve svém okolí.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Card 4 - Spans 1 column, 1 row -->
+                  <div class="big-grid-card-wrapper card-4">
+                    <div class="big-grid-card card-4 anim-scale-in">
+                      <h3
+                        text-appear
+                        class="who-loves-headings font-bold text-gradient"
+                      >
+                        Pro ty co neradi oslovují cizí
+                      </h3>
+                      <p
+                        text-appear
+                        class="text-description-medium text-gradient font-bold"
+                      >
+                        Nemusíš začínat ty. Stačí být vidět.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Statistics Mobile Right Section -->
+            <section class="statistic-mobile-right">
+              <div class="statistic-hover-wrapper">
+                <div class="statistic-content" anim-fade-left>
+                  <p class="text-gradient text-description-medium-big">
+                    <span
+                      class="animated-number title-big"
+                      data-value="85"
+                      data-duration="0.5"
+                      data-lerp="true"
+                      data-lerp-factor="0.075"
+                      data-suffix="%"
+                      data-start="top 95%"
+                      >85%</span
+                    >
+                    lidí nedokáže oslovit opačné pohlaví Ale napsat zprávu
+                    zvládne každý.
+                  </p>
+                </div>
+              </div>
+              <div class="statistic-phone-wrapper">
+                <img
+                  src="assets/images/phone-flat.png"
+                  alt="Mobile displaying Metemi App"
+                  class="statistic-phone"
+                  loading="lazy"
+                  anim-fade-right
+                  data-duration="1.5"
+                />
+              </div>
+            </section>
+
+            <!-- How It Changes Section -->
+            <section class="how-it-changes">
+              <div class="mobile-phone">
+                <img
+                  src="assets/images/phone-flat.png"
+                  alt="Mobile displaying Metemi App"
+                  class="statistic-phone"
+                  loading="lazy"
+                  anim-fade-right
+                />
+              </div>
+              <h2 text-appear class="title-big main-title text-white">
+                How Metemi changes <br class="mobile-hidden" />
+                meeting of
+                <span class="word-switcher-people-groups">people</span>
+                <br />
+                in the real world?
+              </h2>
+              <div class="changes-grid">
+                <!-- First Card -->
+                <div
+                  data-group-name="how-it-changes-cards"
+                  class="change-item-vertical anim-scale-in"
+                >
+                  <div class="title">
+                    <h4 text-appear class="text-description-big text-gradient">
+                      Only real people <br />
+                      around you
+                    </h4>
+                    <p
+                      text-appear
+                      class="text-description-medium text-gradient font-bold"
+                    >
+                      Setkávejte se přirozeně
+                    </p>
+                  </div>
+                  <div class="video">
+                    <video
+                      data-src="assets/videos/how-it-changes-1.mp4#t=0.5"
+                      preload="metadata"
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                      class="first-card-video"
+                    ></video>
+                    <p
+                      class="text-white title-small font-bold video-text"
+                      parallax
+                      data-flipdirection="true"
+                      data-speed="1.75"
+                    >
+                      Don't swipe. <br />
+                      Invite.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Second Card -->
+                <div
+                  data-group-name="how-it-changes-cards"
+                  class="change-item-vertical anim-scale-in"
+                >
+                  <div class="title">
+                    <h4 text-appear class="text-description-big text-gradient">
+                      No swiping, <br />
+                      just meet
+                    </h4>
+                    <p
+                      text-appear
+                      class="text-white text-description-medium text-gradient"
+                    >
+                      Bezpečně a bez stresu
+                    </p>
+                  </div>
+                  <div class="video">
+                    <video
+                      data-src="assets/videos/how-it-changes-2.mp4#t=0.5"
+                      preload="metadata"
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                      class="second-card-video"
+                    ></video>
+                    <p
+                      class="text-white title-small font-bold video-text"
+                      parallax
+                      data-flipdirection="true"
+                      data-speed="1.75"
+                    >
+                      Less texting. <br />
+                      More walking.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Third Card -->
+              <div class="change-item-horizontal anim-scale-in">
+                <div class="video">
+                  <video
+                    data-src="assets/videos/how-it-changes-3.mp4#t=0.5"
+                    preload="metadata"
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                  ></video>
+                  <p
+                    class="text-white title-small font-bold video-text"
+                    parallax
+                    data-flipdirection="true"
+                  >
+                    Don't text. <br />
+                    Talk.
+                  </p>
+                </div>
+                <div class="title">
+                  <h4 text-appear class="text-description-big text-gradient">
+                    No vague algorithm. <br />
+                    Say hi in real life
+                  </h4>
+                  <p
+                    text-appear
+                    class="text-description-medium text-gradient font-bold"
+                  >
+                    Meet people, not predictions
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="mobile-change-container"
+                id="changes-mobile-pin-container"
+              >
+                <div class="mobile-change-inner">
+                  <div class="mobile-change-card-container">
+                    <div class="change-item-mobile" id="changes-mobile-card-1">
+                      <div class="title">
+                        <h4
+                          text-appear
+                          class="text-description-big text-gradient"
+                        >
+                          Only real people <br />
+                          around you
+                        </h4>
+                        <p
+                          text-appear
+                          class="text-description-medium text-gradient"
+                        >
+                          Setkávejte se přirozeně
+                        </p>
+                      </div>
+                      <div class="video">
+                        <video
+                          data-src="assets/videos/video-4.mp4#t=0.5"
+                          preload="metadata"
+                          autoplay
+                          loop
+                          muted
+                          playsinline
+                        ></video>
+                        <p
+                          class="text-white text-description-big-small font-bold video-text"
+                        >
+                          Don't swipe. <br />
+                          Invite.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="change-item-mobile" id="changes-mobile-card-2">
+                      <div class="title">
+                        <h4
+                          text-appear
+                          class="text-description-big text-gradient"
+                        >
+                          No swiping, <br />
+                          just meet
+                        </h4>
+                        <p
+                          text-appear
+                          class="text-description-medium text-gradient"
+                        >
+                          Bezpečně a bez stresu
+                        </p>
+                      </div>
+                      <div class="video">
+                        <video
+                          data-src="assets/videos/video-4.mp4#t=0.5"
+                          preload="metadata"
+                          autoplay
+                          loop
+                          muted
+                          playsinline
+                        ></video>
+                        <p
+                          class="text-white text-description-big-small font-bold video-text"
+                        >
+                          Less texting. <br />
+                          More walking.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="change-item-mobile" id="changes-mobile-card-3">
+                      <div class="title">
+                        <h4
+                          text-appear
+                          class="text-description-big text-gradient"
+                        >
+                          No vague algorithm. <br />
+                          Say hi in real life
+                        </h4>
+                        <p
+                          text-appear
+                          class="text-description-medium text-gradient"
+                        >
+                          Meet people, not predictions
+                        </p>
+                      </div>
+                      <div class="video">
+                        <video
+                          data-src="assets/videos/video-4.mp4#t=0.5"
+                          preload="metadata"
+                          autoplay
+                          loop
+                          muted
+                          playsinline
+                        ></video>
+                        <p
+                          class="text-white text-description-big-small font-bold video-text"
+                        >
+                          Don't text. <br />
+                          Talk.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-controls">
+                    <div
+                      class="carousel-btn carousel-btn-active"
+                      data-changes-mobile-btn
+                    ></div>
+                    <div class="carousel-btn" data-changes-mobile-btn></div>
+                    <div class="carousel-btn" data-changes-mobile-btn></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- Talk To Section -->
+      <section class="talk-to">
+        <h2 title-x-scrub class="main-title title-giant">Talk to me</h2>
+        <div class="talk-to-images">
+          <img
+            src="assets/images/phone.png"
+            alt="Phone Image"
+            class="phone"
+            loading="lazy"
+            anim-fade-right
+            data-start="top 55%"
+          />
+          <div class="avatars-container">
+            <div class="portret-wrapper portret-1" anim-pop-in>
+              <div class="portret-float-wrapper">
+                <img
+                  src="assets/images/portret-1.png"
+                  alt="Portrait Image 1"
+                  class="portret"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="portret-wrapper portret-2" anim-pop-in>
+              <div class="portret-float-wrapper">
+                <img
+                  src="assets/images/portret-2.png"
+                  alt="Portrait Image 2"
+                  class="portret"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="portret-wrapper portret-3" anim-pop-in>
+              <div class="portret-float-wrapper">
+                <img
+                  src="assets/images/portret-3.png"
+                  alt="Portrait Image 3"
+                  class="portret"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="portret-wrapper portret-4" anim-pop-in>
+              <div class="portret-float-wrapper">
+                <img
+                  src="assets/images/portret-4.png"
+                  alt="Portrait Image 4"
+                  class="portret"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="portret-wrapper portret-5" anim-pop-in>
+              <div class="portret-float-wrapper">
+                <img
+                  src="assets/images/portret-5.png"
+                  alt="Portrait Image 5"
+                  class="portret"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="google-play">
+          <h5 text-appear class="title-small text-gradient">
+            Najdi přátelé nebo celou skupinu. Sdílej, setkej se, zůstaň v
+            kontaktu. Nebo potkej někoho nového.
+          </h5>
+          <p text-appear class="text-description-medium">
+            <span class="text-gradient font-bold">Najdi lidi kolem sebe</span> -
+            v parku, kavárně nebo na koncertě.
+            <span class="text-gradient font-bold">Přidej se ke skupině,</span>
+            která má stejný vibe. Stačí si vybrat
+            <span class="text-gradient font-bold">místo nebo téma</span> a jít
+            ven.
+          </p>
+          <button class="google-play-btn google-play-badge">
+            <img
+              src="assets/images/google-play.png"
+              alt="Google Play Badge"
+              loading="lazy"
+              anim-fade
+            />
+          </button>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="how-it-works">
+        <div class="container">
+          <!-- Animated Bubble Background -->
+          <div class="gradient-bg">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="goo" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+                  <feGaussianBlur
+                    in="SourceGraphic"
+                    stdDeviation="10"
+                    result="blur"
+                  />
+                  <feColorMatrix
+                    in="blur"
+                    mode="matrix"
+                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                    result="goo"
+                  />
+                  <feBlend in="SourceGraphic" in2="goo" result="blended" />
+                  <feGaussianBlur in="blended" stdDeviation="40" />
+                </filter>
+              </defs>
+            </svg>
+            <div class="gradients-container">
+              <div class="g1"></div>
+              <div class="g2"></div>
+              <div class="g3"></div>
+              <div class="g4"></div>
+              <div class="g5"></div>
+              <div class="interactive"></div>
+            </div>
+          </div>
+          <h2 text-appear class="main-title title-small">Jak to funguje</h2>
+          <div class="card-container">
+            <!-- First card -->
+            <div
+              data-group-name="how-it-works-cards"
+              class="card anim-scale-in"
+            >
+              <h5
+                text-appear
+                class="text-description-big font-bold card-title text-gradient"
+              >
+                1 <br />
+                Zapni Metemi a uvidíš lidi nebo skupiny ve svém okolí.
+              </h5>
+              <p text-appear class="text-description-medium text-gradient">
+                (Jen vzdálenost - nevíš, kde přesně jsou.)
+              </p>
+              <div class="how-img-wrapper" why-card-image-1>
+                <img
+                  class="how-img-1"
+                  src="assets/images/how-card-1.png"
+                  alt="phone"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <!-- Second card -->
+            <div
+              data-group-name="how-it-works-cards"
+              class="card anim-scale-in"
+            >
+              <h5
+                text-appear
+                class="text-description-big font-bold card-title text-gradient"
+              >
+                2 <br />
+                Oslov je nebo se nech oslovit.
+              </h5>
+              <p text-appear class="text-description-medium text-gradient">
+                Rychle, přirozeně, anonymně.
+              </p>
+              <div class="how-img-wrapper" why-card-image-2>
+                <img
+                  class="how-img-2"
+                  src="assets/images/how-card-2.jpg"
+                  alt="phone"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <!-- Third card -->
+            <div
+              data-group-name="how-it-works-cards"
+              class="card anim-scale-in"
+            >
+              <h5
+                text-appear
+                class="text-description-big font-bold card-title text-gradient"
+              >
+                3 <br />
+                Potkejte se osobně.
+              </h5>
+              <p text-appear class="text-description-medium text-gradient">
+                V parku. V kavárně. Nebo třeba jen na chvíli. Za každé setkání
+                vás odměníme.
+              </p>
+              <div class="how-img-wrapper" why-card-image-3>
+                <img
+                  class="how-img-3"
+                  src="assets/images/how-card-3.png"
+                  alt="phone"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+          <h2
+            letter-spacing-scrub
+            class="title-giant text-white font-bold metemi-text"
+          >
+            METEMI
+          </h2>
+        </div>
+        <!-- Mobile scrub section -->
+        <div class="contrainer-mobile-bg">
+          <div class="container-mobile" id="how-mobile-pin-container">
+            <div class="container-mobile-inner">
+              <h2 text-appear class="main-title title-small">Jak to funguje</h2>
+              <div class="card-container">
+                <!-- First card -->
+                <div class="card" id="how-mobile-card-1">
+                  <h5
+                    text-appear
+                    class="text-description-big font-bold card-title text-gradient"
+                  >
+                    1 <br />
+                    Zapni Metemi a uvidíš lidi nebo skupiny ve svém okolí. →
+                  </h5>
+                  <p text-appear class="text-description-medium text-gradient">
+                    (Jen vzdálenost - nevíš, kde přesně jsou.)
+                  </p>
+                  <div class="how-img-wrapper" why-card-image-1>
+                    <img
+                      class="how-img-1"
+                      src="assets/images/how-card-1.png"
+                      alt="phone"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <!-- Second card -->
+                <div class="card" id="how-mobile-card-2">
+                  <h5
+                    text-appear
+                    class="text-description-big font-bold card-title text-gradient"
+                  >
+                    2 <br />
+                    Oslov je nebo se nech oslovit. →
+                  </h5>
+                  <p text-appear class="text-description-medium text-gradient">
+                    Rychle, přirozeně, anonymně.
+                  </p>
+                  <div class="how-img-wrapper" why-card-image-2>
+                    <img
+                      class="how-img-2"
+                      src="assets/images/how-card-2.jpg"
+                      alt="phone"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <!-- Third card -->
+                <div class="card" id="how-mobile-card-3">
+                  <h5
+                    text-appear
+                    class="text-description-big font-bold card-title text-gradient"
+                  >
+                    3 <br />
+                    Potkejte se osobně.
+                  </h5>
+                  <p text-appear class="text-description-medium text-gradient">
+                    V parku. V kavárně. Nebo třeba jen na chvíli. Za každé
+                    setkání vás odměníme.
+                  </p>
+                  <div class="how-img-wrapper" why-card-image-3>
+                    <img
+                      class="how-img-3"
+                      src="assets/images/how-card-3.png"
+                      alt="phone"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Control buttons -->
+              <div class="carousel-controls">
+                <div
+                  class="carousel-btn carousel-btn-active"
+                  id="how-mobile-btn"
+                ></div>
+                <div class="carousel-btn" id="how-mobile-btn"></div>
+                <div class="carousel-btn" id="how-mobile-btn"></div>
+              </div>
+            </div>
+          </div>
+          <h2
+            letter-spacing-scrub
+            class="title-giant text-white font-bold metemi-text"
+          >
+            METEMI
+          </h2>
+        </div>
+
+        <div class="stats-block-hover-wrapper">
+          <div class="stats-block" anim-fade-in>
+            <p class="text-description-medium-big text-gradient font-bold">
+              <span class="title-big">57%</span> lidí se cítí osaměle. V
+              kavárně, v tramvaji, mezi lidmi, přesto izolovaně.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1 Image Left Text Right Section -->
+      <section class="image-left-text-split-1">
+        <div anim-fade-left class="image-container">
+          <video
+            data-src="assets/videos/video-4.mp4#t=0.5"
+            preload="metadata"
+            autoplay
+            loop
+            muted
+            playsinline
+            class="image-video"
+          ></video>
+          <p
+            class="video-text title-small"
+            parallax
+            data-flipdirection="true"
+            data-speed="2.5"
+          >
+            Don't tweet. <br />
+            Meet.
+          </p>
+          <div class="dm-container">
+            <div class="dm-wrapper" anim-pop-in>
+              <div class="dm-red">
+                <p class="description">
+                  Tak jo, potkáme se v 7 před tou vietnamskou restaurací?
+                  Vezmeme to s sebou.
+                </p>
+                <p class="time">12:02</p>
+              </div>
+            </div>
+            <div class="dm-wrapper" anim-pop-in>
+              <div class="dm-gray">
+                <p class="description">OK, agree, see U later.</p>
+                <p class="time">12:05</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-container">
+          <h3 text-appear class="text-gradient title-small title">
+            Bezpečný prostor, kde máš všechno pod kontrolou.
+          </h3>
+          <p text-appear class="text-description-medium">
+            Nikdo
+            <span class="text-gradient font-bold">nevidí tvou</span> přesnou
+            <span class="text-gradient font-bold">polohu,</span> pouze vzálenost
+          </p>
+          <p text-appear class="text-description-medium">
+            <span class="text-gradient font-bold">Aplikace tě</span> sama
+            <span class="text-gradient font-bold">chrání</span> můžeš nahlásit,
+            skrýt nebo zablokovat kohokoli chceš
+          </p>
+          <p text-appear class="text-description-medium">
+            <span class="text-gradient font-bold">Navržené pro pohodlí</span>
+            všech bez ohledu na věk, zkušenosti nebo povahu
+          </p>
+          <p text-appear class="text-gradient text-description-medium">
+            (Aplikace je určena pro uživatele od 18 let)
+          </p>
+        </div>
+      </section>
+
+      <!-- 2 Text Left Image Right Section -->
+      <section class="image-right-text-split-2">
+        <div anim-fade-right class="image-container">
+          <video
+            data-src="assets/videos/video-3.mp4#t=0.5"
+            preload="metadata"
+            autoplay
+            loop
+            muted
+            playsinline
+            class="image-video"
+          ></video>
+          <p
+            class="video-text title-small"
+            parallax
+            data-flipdirection="true"
+            data-speed="2.5"
+          >
+            Don't swipe. <br />
+            Invite.
+          </p>
+          <div class="dm-container">
+            <div class="dm-wrapper" anim-pop-in>
+              <div class="dm-red">
+                <p class="description">
+                  Okej, v 15:00 na náměstí u La Bohème? Sedneme si ven.
+                </p>
+                <p class="time">12:02</p>
+              </div>
+            </div>
+            <div class="dm-wrapper" anim-pop-in>
+              <div class="dm-gray">
+                <p class="description">OK, agree, see U later</p>
+                <p class="time">12:05</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-container">
+          <h3 text-appear class="text-gradient title-small title">
+            Za každé setkání dárek pro tebe
+          </h3>
+          <p text-appear class="text-description-medium">
+            Pokaždé,
+            <span class="text-gradient font-bold">když se s někým</span> ve svém
+            okolí <span class="text-gradient font-bold">setkáš</span>,
+            <span class="text-gradient font-bold">najdeš</span> hned v aplikaci
+            <span class="text-gradient font-bold">odměnu</span>.
+          </p>
+          <button class="google-play-btn google-play-badge">
+            <img
+              src="assets/images/google-play.png"
+              alt="Map Image"
+              class=""
+              loading="lazy"
+              anim-fade
+            />
+          </button>
+        </div>
+      </section>
+
+      <!-- 3 Image Left Text Right Section -->
+      <section class="image-left-text-split-3">
+        <div anim-fade-left class="image-container">
+          <video
+            data-src="assets/videos/video-2.mp4#t=0.5"
+            preload="metadata"
+            autoplay
+            loop
+            muted
+            playsinline
+            class="image-video"
+          ></video>
+          <p
+            class="video-text title-small"
+            parallax
+            data-flipdirection="true"
+            data-speed="2.5"
+          >
+            Don't push. <br />
+            Blush.
+          </p>
+          <div class="dm-container">
+            <div class="dm-wrapper" anim-pop-in>
+              <div class="dm-red">
+                <p class="description">
+                  Okej, v 15:00 na náměstí u La Bohème? Sedneme si ven.
+                </p>
+                <p class="time">12:02</p>
+              </div>
+            </div>
+            <div class="dm-wrapper" anim-pop-in>
+              <div class="dm-gray">
+                <p class="description">OK, agree, see U later</p>
+                <p class="time">12:05</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-container">
+          <h3 text-appear class="text-gradient title-small title">
+            Každý někdy hledá někoho blízkého. Možná jste si blíž, než si
+            myslíte.
+          </h3>
+          <p text-appear class="text-description-medium">
+            <span class="text-gradient font-bold">Metemi oživuje</span> městský
+            životní styl.V kavárnách, parcích, tramvajích, coworku - stačí se
+            zapojit.
+            <span class="text-gradient font-bold">Spontánní akce,</span> zmrzka
+            v parku, společný běh nebo jen krátký rozhovor.
+            <span class="text-gradient font-bold"></span>
+          </p>
+          <button class="google-play-btn google-play-badge">
+            <img
+              src="assets/images/google-play.png"
+              alt="Map Image"
+              class=""
+              loading="lazy"
+              anim-fade
+            />
+          </button>
+        </div>
+      </section>
+
+      <!-- 4 Text Left Image Right Section BACKGROUND -->
+
+      <div anim-fade-right class="image-container-mobile">
+        <video
+          data-src="assets/videos/video-1.mp4#t=0.5"
+          preload="metadata"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="image-video"
+        ></video>
+        <p
+          class="video-text title-small"
+          parallax
+          data-flipdirection="true"
+          data-speed="2.5"
+        >
+          Meet real people. <br />
+          around you.
+        </p>
+        <div class="dm-container">
+          <div class="dm-wrapper" anim-pop-in>
+            <div class="dm-red">
+              <p class="description">
+                Okej, v 15:00 na náměstí u La Bohème? Sedneme si ven.
+              </p>
+              <p class="time">12:02</p>
+            </div>
+          </div>
+          <div class="dm-wrapper" anim-pop-in>
+            <div class="dm-gray">
+              <p class="description">OK, agree, see U later</p>
+              <p class="time">12:05</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="image-right-text-split-4">
+        <div class="gradient-bg">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="goo" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+                <feGaussianBlur
+                  in="SourceGraphic"
+                  stdDeviation="10"
+                  result="blur"
+                />
+                <feColorMatrix
+                  in="blur"
+                  mode="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                  result="goo"
+                />
+                <feBlend in="SourceGraphic" in2="goo" result="blended" />
+                <feGaussianBlur in="blended" stdDeviation="40" />
+              </filter>
+            </defs>
+          </svg>
+          <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+          </div>
+        </div>
+        <div anim-fade-right class="image-container">
+          <video
+            data-src="assets/videos/video-1.mp4#t=0.5"
+            preload="metadata"
+            autoplay
+            loop
+            muted
+            playsinline
+            class="image-video"
+          ></video>
+          <p
+            class="video-text title-small"
+            parallax
+            data-flipdirection="true"
+            data-speed="2"
+          >
+            Meet real people. <br />
+            around you.
+          </p>
+          <div class="dm-container">
+            <div class="dm-wrapper" anim-pop-in>
+              <div class="dm-red">
+                <p class="description">
+                  Okej, v 15:00 na náměstí u La Bohème? Sedneme si ven.
+                </p>
+                <p class="time">12:02</p>
+              </div>
+            </div>
+            <div class="dm-wrapper" anim-pop-in>
+              <div class="dm-gray">
+                <p class="description">OK, agree, see U later</p>
+                <p class="time">12:05</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-container">
+          <h3 text-appear class="text-white title-small">
+            Přestaň lidi míjet. Začni je potkávat.
+          </h3>
+          <p text-appear class="text-description-medium text-white">
+            Život se děje offline. <span class="font-bold">Metemi tě</span> k
+            němu <span class="font-bold">přiblíží.</span>
+          </p>
+
+          <button class="google-play-btn google-play-badge">
+            <img
+              src="assets/images/google-play.png"
+              alt="Map Image"
+              class=""
+              loading="lazy"
+              anim-fade
+            />
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="google-play-container">
+        <p text-appear class="text-description-medium">
+          <span class="text-gradient font-bold">Začněte</span> reálně
+          <span class="text-gradient font-bold">potkávat</span>
+          lidi.
+          <br />
+          Ne za týden. Ne zítra.
+          <span class="text-gradient font-bold">Klidně hned.</span>
+        </p>
+        <button class="google-play-btn google-play-badge">
+          <img
+            src="assets/images/google-play.png"
+            alt="Map Image"
+            class=""
+            loading="lazy"
+            anim-fade
+          />
+        </button>
+      </div>
+      <h2 letter-spacing-scrub class="main-title footer-title">Metemi</h2>
+      <div class="links-container text-description-medium">
+        <p>
+          <a href="#">O nás</a> • <a href="#">Podmínky použití</a> •
+          <a href="#">Kontakt</a> • <a href="#">Blog</a> •
+          <a href="#" class="social-link">
+            <!-- <svg
+              class="social-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.204-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"
+              />
+            </svg> -->
+            Instagram
+          </a>
+          •
+
+          <a href="#" class="social-link">
+            <!-- <svg
+              class="social-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"
+              />
+            </svg> -->
+            LinkedIn
+          </a>
+          •
+
+          <a href="#" class="social-link">
+            <!-- <svg
+              class="social-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.194-1.888.324.037.636.074.973.074 1.883 0 3.616-.543 5.068-1.55-1.88-.035-3.47-1.27-4.018-2.968.268.05.526.074.797.074.36 0 .72-.05 1.056-.141-1.962-.4-3.44-2.124-3.44-4.209v-.053c.58.322 1.243.517 1.95.544-1.153-.768-1.91-2.08-1.91-3.566 0-.785.212-1.52.583-2.15 2.12 2.599 5.294 4.31 8.87 4.49-.073-.31-.11-.632-.11-.955 0-2.312 1.888-4.2 4.2-4.2 1.207 0 2.298.507 3.065 1.318.956-.189 1.858-.544 2.67-1.027-.314.965-.974 1.77-1.84 2.281.85-.1 1.662-.327 2.414-.657-.56.841-1.27 1.578-2.084 2.171z"
+              />
+            </svg> -->
+            TikTok
+          </a>
+        </p>
+      </div>
+      <button class="google-play-btn google-play-badge">
+        <img
+          src="assets/images/google-play.png"
+          alt="Map Image"
+          class=""
+          loading="lazy"
+          anim-fade
+        />
+      </button>
+
+      <img
+        src="assets/images/logo.png"
+        alt="Metemi Logo"
+        class="logo"
+        loading="lazy"
+      />
+      <img
+        src="assets/images/how-bg.png"
+        alt="Metemi Logo"
+        class="bottom-bg"
+        loading="lazy"
+      />
+    </footer>
+
+    <!-- Fixed Bottom Banner -->
+    <div class="fixed-bottom-banner">
+      <button class="banner-close" aria-label="Close banner">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 6L6 18M6 6L18 18"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <div class="banner-content">
+        <div class="banner-text">
+          <h4 class="text-description-big text-gradient font-bold">
+            Ready to meet people around you?
+          </h4>
+          <p class="text-description-medium">
+            Start connecting in real life today
+          </p>
+        </div>
+        <button class="google-play-btn banner-cta">
+          <img
+            src="assets/images/google-play.png"
+            alt="Download our app"
+            loading="lazy"
+          />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
