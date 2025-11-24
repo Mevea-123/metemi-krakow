@@ -11,7 +11,7 @@ export default function Krakow() {
           <h4 className="text-2xl text-gray font-bold anim-text-lines text-center md:text-start">
             Spuštění začíná v Krakowě
           </h4>
-          <p className="text-xl text-gray anim-text-lines md:text-start text-center text-balance">
+          <p className="text-xl text-gray anim-text-lines md:text-start text-center">
             Kraków je první město, kde aplikaci testujeme. Zapiš se a získej
             přístup jako jeden z prvních.
           </p>
