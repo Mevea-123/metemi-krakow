@@ -14,16 +14,10 @@
 import React from "react";
 
 interface MetemiFilledProps {
-  width?: number;
-  height?: number;
-  fill?: string;
   className?: string;
 }
 
 export const MetemiFilled: React.FC<MetemiFilledProps> = ({
-  width = 24,
-  height = 24,
-  fill = "#828282",
   className = "",
 }) => {
   return (

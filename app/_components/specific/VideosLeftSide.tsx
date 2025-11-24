@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { DMText } from "../shared/ui/DMText";
 import Video from "../shared/ui/Video";
 

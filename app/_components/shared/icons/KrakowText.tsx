@@ -1,16 +1,10 @@
 import React from "react";
 
 interface Props {
-  width?: number;
-  height?: number;
-  fill?: string;
   className?: string;
 }
 
 export const KrakowText: React.FC<Props> = ({
-  width = 24,
-  height = 24,
-  fill = "#828282",
   className = "",
 }) => {
   return (

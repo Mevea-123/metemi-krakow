@@ -1,8 +1,5 @@
-import Image from "next/image";
-import OutlinedTextSVG from "../shared/ui/OutlinedTextSVG";
-import EmailSubscribe from "../shared/ui/EmailSubscribe";
-import { MetemiBottom } from "../shared/icons/MetemiText";
 import { KrakowText } from "../shared/icons/KrakowText";
+import EmailSubscribe from "../shared/ui/EmailSubscribe";
 import Video from "../shared/ui/Video";
 
 export default function Krakow() {

@@ -13,6 +13,10 @@ type Props = {
   animateTyping?: boolean;
 };
 
+type GSAPVarsWithBlur = gsap.TweenVars & {
+  "--blur-amount"?: string;
+};
+
 export const DMText = ({
   rounded,
   colorVariant,
@@ -44,7 +48,7 @@ export const DMText = ({
       scale: 0,
       opacity: 0,
       "--blur-amount": "0px",
-    } as any);
+    } as GSAPVarsWithBlur);
 
     // Typing state (if enabled)
     if (animateTyping && textElement && dotsElement) {
@@ -210,7 +214,7 @@ export const DMText = ({
       toggleActions: "play none none none", // Changed to manual reverse handling
       onEnter: () => {
         // Reset blur
-        gsap.set(container, { "--blur-amount": "0px" } as any);
+        gsap.set(container, { "--blur-amount": "0px" } as GSAPVarsWithBlur);
         // Animate Pop-in
         gsap.fromTo(container, 
           { scale: 0, opacity: 0 },
@@ -225,14 +229,14 @@ export const DMText = ({
                 "--blur-amount": "13px",
                 duration: 0.6,
                 ease: "power2.inOut",
-              } as any);
+              } as GSAPVarsWithBlur);
             },
           }
         );
       },
       onLeaveBack: () => {
         // Custom Fade Out (Not reverse elastic)
-        gsap.set(container, { "--blur-amount": "0px" } as any);
+        gsap.set(container, { "--blur-amount": "0px" } as GSAPVarsWithBlur);
         gsap.to(container, {
           duration: 0.5,
           opacity: 0,
@@ -301,7 +305,7 @@ export const DMText = ({
           {
             backdropFilter: "blur(var(--blur-amount))",
             WebkitBackdropFilter: "blur(var(--blur-amount))",
-          } as any
+          } as React.CSSProperties
         }
         className={`relative text-sm pb-[clamp(1.5rem,calc(1.237rem+1.053vw),2.5rem)] leading-[130%] text-white ${roundedClass} ${colorClass} ${className} rounded-xl p-[clamp(0.5rem,calc(0.336rem+0.658vw),1.125rem)] flex flex-col w-[clamp(13.438rem,calc(8.75rem+18.75vw),31.25rem)]`}
       >

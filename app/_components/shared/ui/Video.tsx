@@ -31,7 +31,7 @@ export default function Video({
     const tryPlay = async () => {
       try {
         await video.play();
-      } catch (error) {
+      } catch {
         const playOnInteraction = () => {
           video.play().catch(() => {});
           document.removeEventListener("touchstart", playOnInteraction);

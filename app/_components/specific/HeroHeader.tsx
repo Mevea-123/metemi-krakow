@@ -1,6 +1,5 @@
 import React from "react";
 import NavButton from "./NavButton";
-import { MetemiBottom } from "../shared/icons/MetemiText";
 import { MetemiFilled } from "../shared/icons/MetemiFilled";
 
 export default function HeroHeader() {
