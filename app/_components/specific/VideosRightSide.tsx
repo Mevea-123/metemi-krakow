@@ -46,7 +46,7 @@ export default function VideosRightSide() {
         <h3 className="text-4xl anim-text-lines-gradient font-bold leading-[90%] text-center lg:text-start">
           Potkej lidi kolem <br /> sebe. Offline. <br /> Již brzy.
         </h3>
-        <p className="text-2xl-small text-gray anim-text-lines leading-[120%] text-center lg:text-start">
+        <p className="text-2xl-small text-gray anim-text-lines leading-[120%] text-center lg:text-start mb-32 md:mb-0">
           Život se děje offline. <br />{" "}
           <span className="font-bold">Metemi tě</span> k němu{" "}
           <span className="font-bold">přiblíží.</span>
