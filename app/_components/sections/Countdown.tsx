@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { LetterMIcon } from "../shared/icons";
 import ShimmerWrapper from "../shared/ui/ShimmerWrapper";
@@ -27,6 +28,32 @@ export default function Countdown() {
   const animatedRef = useRef(false);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      const elements = countdownRef.current?.querySelectorAll(".text-display-xl");
+      elements?.forEach((element) => {
+        gsap.fromTo(
+          element,
+          {
+            letterSpacing: "0.4em",
+          },
+          {
+            letterSpacing: "0em",
+            duration: 1,
+            ease: "none",
+            scrollTrigger: {
+              trigger: element,
+              start: "top 100%",
+              end: "bottom 70%",
+              scrub: true,
+              markers: false,
+            },
+          }
+        );
+      });
+    }, countdownRef);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -88,6 +115,7 @@ export default function Countdown() {
     }
 
     return () => {
+      ctx.revert();
       if (node) {
         observer.unobserve(node);
       }
@@ -97,7 +125,7 @@ export default function Countdown() {
   return (
     <div
       ref={countdownRef}
-      className="flex relative justify-between w-[85vw] md:w-[80vw] lg:w-[70vw] mx-auto mt-150 md:mt-0"
+      className="flex relative justify-center w-[85vw] gap-[5vw] md:w-[80vw] lg:w-[70vw] mx-auto mt-150 md:mt-0"
     >
       <div className="text-display-xl font-bold text-outline-black whitespace-nowrap">
         {daysLeft}{" "}
