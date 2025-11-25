@@ -185,6 +185,7 @@
 
 body {
   overflow-x: hidden;
+  cursor: url("/cursor.svg"), auto;
 }
 
 /* (NavButton custom CSS removed; using Tailwind utilities instead) */
@@ -539,4 +540,26 @@ body {
 
 .shimmer-container.shimmer-active::before {
   animation: shimmer-sweep 1.5s ease-in-out forwards;
+}
+
+/* ========================================
+   CUSTOM SCROLLBAR
+   ======================================== */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ededed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f33b60 0%, #eb934f 100%);
+  border-radius: 23.836px;
+  border: 4px solid #ededed;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #d62f50 0%, #d68242 100%);
+  border: 4px solid #ededed;
 }
