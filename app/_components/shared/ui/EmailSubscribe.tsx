@@ -71,7 +71,7 @@ export default function EmailSubscribe({ className, variant }: Props) {
   const mainClass =
     variant === "primary"
       ? "h-[clamp(2.688rem,calc(2.408rem+1.118vw),3.75rem)] w-full mt-16 2xl:mt-0 2xl:w-[clamp(28.125rem,calc(-2.875rem+32.292vw),35.875rem)]"
-      : "h-[clamp(1.75rem,calc(1.421rem+1.316vw),3rem)] md:w-470";
+      : "h-[clamp(1.75rem,calc(1.421rem+1.316vw),3rem)] md:w-400";
   const buttonClass =
     variant === "primary"
       ? "bg-secondary text-xl px-24"

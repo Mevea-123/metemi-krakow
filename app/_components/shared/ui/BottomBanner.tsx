@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import EmailSubscribe from "./EmailSubscribe";
 
 export default function BottomBanner() {
   const [isVisible, setIsVisible] = useState(false);
@@ -94,16 +94,7 @@ export default function BottomBanner() {
             Start connecting in real life today
           </p>
         </div>
-        <button className="google-play-btn h-full group shrink-0 active:scale-98 transition-transform hover:scale-105 bg-transparent border-none p-0 cursor-pointer relative overflow-hidden inline-block">
-          <div className="absolute top-0 -left-[150%] w-full h-full bg-gradient-to-r from-transparent via-white/80 to-transparent -skew-x-[25deg] transition-[left] duration-500 ease-out group-hover:left-[150%] pointer-events-none z-[2]" />
-          <Image
-            src="/images/google-play.png"
-            alt="Download our app"
-            width={170}
-            height={45}
-            className="h-full object-contain block relative"
-          />
-        </button>
+        <EmailSubscribe variant="secondary" />
       </div>
     </div>
   );
